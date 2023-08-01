@@ -1,0 +1,44 @@
+x1 = int(input("X: "))
+y = int(input("Y: "))
+
+if x == 0:
+    print("X can`t be equal to zero")
+    x = int(input("X: "))
+
+result = y / x
+print(result)
+
+
+
+
+x1 = int(input("X: "))
+y1 = int(input("Y: "))
+
+if x1 == 0:
+    print("X can`t be equal to zero")
+    x1 = int(input("X: "))
+
+    if x1 == 0:
+        print("X can`t be equal to zero")
+        x1 = int(input("X: "))
+
+        if x1 == 0:
+            print("X can`t be equal to zero")
+            x1 = int(input("X: "))
+
+result = y1 / x1
+
+
+x2 = int(input("X: "))
+y2 = int(input("Y: "))
+
+if x2 >= 0:
+    if y2 >= 0:               # x > 0, y > 0
+        print("Перша чверть")
+    else:                    # x > 0, y < 0
+        print("Четверта чверть")
+else:
+    if y2 >= 0:               # x < 0, y > 0
+        print("Друга чверть")
+    else:                    # x < 0, y < 0
+        print("Третя чверть")

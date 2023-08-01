@@ -1,0 +1,21 @@
+
+money = 2
+if money:
+    print(f"You have {money}$ in your pocket!")    
+else:
+    print ("You gave NO money in your pocket!")
+
+
+
+numberOfKids = None
+if numberOfKids:   
+    print(f"You have {numberOfKids} kids")
+else:
+    print(f"You have NO kids!")
+
+
+user_name = input("Enter your name: ")
+if user_name:
+    print(f"Your name is {user_name}")
+else :
+    print("No name was typed!")
