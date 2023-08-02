@@ -5,7 +5,7 @@ if work_experience >=0 and work_experience <= 1:
     print (developer_type)
 
 elif work_experience >1 and work_experience <=5: 
-    developer_type = "Middle"
+    developer_type = " Middle"
     print (developer_type)
 
 else  :
