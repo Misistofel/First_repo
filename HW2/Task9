@@ -1,0 +1,24 @@
+# first = int(input("Enter the first integer: "))
+# second = int(input("Enter the second integer: "))
+
+# gcd = second if second < first else first
+
+# while first % gcd !=0 or second % gcd !=0 :
+#     gcd = gcd -1
+    
+# print(gcd)
+
+
+#Ви вводите число, а потім питаєте скільки разів його необхідно помножити на 2, а далі повторюєте операцію доки не введете нуль.
+num = int(input("Enter the first integer: "))
+
+while num !=0 :
+  count = int(input("Скільки разів перше число помножити на 2 ?"))
+  
+
+
+
+
+
+
+    
