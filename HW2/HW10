@@ -1,21 +1,21 @@
-num = 0
-sum = 0
-while True:
-    num = int(input("Enter integer2 (0 for output): "))
-    if num == 0:
-        break
-    for i in range(0, num + 1):
-        sum += i
+# num = 0
+# sum = 0
+# while True:
+#     num = int(input("Enter integer2 (0 for output): "))
+#     if num == 0:
+#         break
+#     for i in range(num + 1):
+#         sum += i
 
 
-    #     while True:
-    # num = int(input("Введіть число (0 для виходу): "))
-    # if num == 0:
-    #     break
-    # repeat = int(input("Скільки разів помножити число на 2? "))
-    # for i in range(repeat):
-    #     num = num * 2
-    # print(num)
-     
+  # а ще можна так:
+num1 = 1
+sum1 = 0
+while num1!= 0:
+    num1 = int(input("Enter integer2 (0 for output): "))
+    
+    for i in range(num1 + 1):
+        sum1 += i 
+print (sum1)       
 
 

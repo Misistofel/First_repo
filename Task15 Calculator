@@ -1,0 +1,51 @@
+result = None
+operand = None
+operator = None
+wait_for_number = True
+
+while operator !=0:
+     
+     if not wait_for_number:
+       operator = print("Введіть операнд  '+'  або '-' або  '*' або '/' !")
+       if operator =='+' or operator =='-' or operator =='*' or operator =='/':
+          wait_for_number = True
+       else:
+          break
+        
+     else:
+          wait_for_number = True
+          operand = int(input('Ввведіть число '))
+          if type(operand) == (int):
+            if result ==  None:
+               result = operand
+               wait_for_number = False
+            else:
+               if operand =='+':
+                  result = result + operand
+                  wait_for_number = False
+               elif operand =='-':
+                  result = result - operand
+                  wait_for_number = False
+               elif operand =='*':
+                  result = result * operand
+                  wait_for_number = False 
+               elif operand =='/':
+                  try: result = result / operand
+                  except ZeroDivisionError:
+                    print("На нуль ділити не можна!")
+               wait_for_number = False     
+               
+          else:
+           print("Ви ввели  не число.")
+           break
+          
+print(result)          
+          
+
+      
+         
+
+
+        
+            
+              

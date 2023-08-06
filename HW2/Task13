@@ -1,0 +1,57 @@
+# Тести перевіряють та кодують наступні рядки:
+# "Hello my little friends!", offset = 37,
+# "Hello world!", offset = 7
+
+message = input("Enter a message: ")
+offset = int(input("Enter the offset: "))
+encoded_message = ""
+for ch in message:
+    if ch.isalpha():
+        if ch.isupper():
+            start = ord('A')
+        else:
+            start = ord('a')   
+        pos = ord(ch) - start
+        pos = (pos + offset) % 26 
+        encoded_message = encoded_message  + chr(pos + start)  
+    else:
+        encoded_message = encoded_message + ch
+print (encoded_message)    
+
+
+#     def caesar_cipher(text, shift):
+#     result = ""
+#     for char in text:
+#         # Для кожного символу перевіряємо, чи він є літерою
+#         if char.isalpha():
+#             # Визначаємо, чи символ велика, чи мала літера
+#             if char.isupper():
+#                 start = ord('A')
+#             else:
+#                 start = ord('a')
+#             # Застосовуємо зсув і обертаємо його в межі алфавіту
+#             shifted_char = chr((ord(char) - start + shift) % 26 + start)
+#             result += shifted_char
+#         else:
+#             # Якщо символ не є літерою, додаємо його без змін
+#             result += char
+#     return result
+
+# # Вхідний текст та зсув
+# input_text = "Hello my little friends!"
+# shift_value = 37
+
+# # Виклик функції шифру Цезаря
+# encrypted_text = caesar_cipher(input_text, shift_value)
+
+# # Вивід зашифрованого тексту
+# print("Зашифрований текст:", encrypted_text)
+# Цей код зашифрує фразу "Hello my little friends!" за допомогою шифру Цезаря зі зсувом 37 та виведе зашифрований текст на екрані. Звісно, декодування можна виконати, змінивши зсув на протилежне значення.
+
+
+
+
+
+
+        
+        
