@@ -3,49 +3,51 @@ operand = None
 operator = None
 wait_for_number = True
 
-while operator !=0:
-     
-     if not wait_for_number:
-       operator = print("Введіть операнд  '+'  або '-' або  '*' або '/' !")
-       if operator =='+' or operator =='-' or operator =='*' or operator =='/':
-          wait_for_number = True
-       else:
-          break
-        
-     else:
-          wait_for_number = True
-          operand = int(input('Ввведіть число '))
-          if type(operand) == (int):
-            if result ==  None:
-               result = operand
-               wait_for_number = False
-            else:
-               if operand =='+':
-                  result = result + operand
-                  wait_for_number = False
-               elif operand =='-':
-                  result = result - operand
-                  wait_for_number = False
-               elif operand =='*':
-                  result = result * operand
-                  wait_for_number = False 
-               elif operand =='/':
-                  try: result = result / operand
-                  except ZeroDivisionError:
-                    print("На нуль ділити не можна!")
-               wait_for_number = False     
-               
-          else:
-           print("Ви ввели  не число.")
-           break
-          
-print(result)          
-          
-
-      
-         
-
-
-        
-            
-              
+while True:
+    user_input = input(">>>")
+    
+    if user_input == "=":
+        break
+    
+    if wait_for_number:
+        try:
+            operand = int(user_input)
+            wait_for_number = False
+        except ValueError:
+            print("It's not a number")
+            continue
+    else:
+        # operator = print("Введіть операнд  '+'  або '-' або  '*' або '/' !")
+        if user_input in ('+', '-', '*', '/'):
+            operator = user_input
+            wait_for_number = True
+        else:
+            print("This is not an operator")
+            continue
+    
+    if not result:
+        result = operand
+        operand = None
+        continue
+    
+    if operator and operand:
+    
+        if operator =='+':
+            result = result + operand
+            # wait_for_number = False
+        elif operator =='-':
+            result = result - operand
+            # wait_for_number = False
+        elif operator =='*':
+            result = result * operand
+            # wait_for_number = False
+        elif operator =='/':
+            try: 
+                result = result / operand
+            except ZeroDivisionError:
+                print("На нуль ділити не можна!")
+        operand = None
+        operator = None
+# else:
+#     print("Ви ввели  не число.")
+#     break
