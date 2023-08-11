@@ -1,0 +1,19 @@
+
+# написати функцію  first буде мати першим параметром змінну size,
+# а також вона може приймати будь-яку кількість позиційних аргументів. 
+#Функція повинна повернути суму size із загальною кількістю переданих до неї позиційних аргументів.
+
+def first(size=0, *args ):
+    result = size + sum(args)
+    print(result)
+    return result
+
+def second(size1,**kwargs ):
+    result1 = size1 + sum(kwargs.values())
+    print(result1)
+    return result1
+    
+
+
+first(1, 3,3,3,3)
+second(3, b=1, c=2, d=3)

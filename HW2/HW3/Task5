@@ -1,0 +1,20 @@
+def get_fullname(first_name,  last_name, middle_name = ""):
+    result =  first_name + " " + middle_name + " " + last_name
+    print (result)
+    return result
+
+
+get_fullname('Marina', 'Tofel')
+
+
+
+# def get_full_name(first_name, last_name, middle_name=None):
+#     if middle_name:
+#         full_name = f"{first_name} {middle_name} {last_name}"
+#     else:
+#         full_name = f"{first_name} {last_name}"
+#     return full_name
+
+# # Приклади використання функції
+# print(get_full_name("Іван", "Петров", "Олександрович"))  # Виведе: Іван Олександрович Петров
+# print(get_full_name("Марія", "Ковальчук"))  # Виведе: Марія Ковальчук

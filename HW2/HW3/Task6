@@ -1,0 +1,12 @@
+def format_string(string, length):
+           
+    if len(string) >= length:
+        return string
+    else:
+        numOfSpaces = (length - len(string)) // 2
+        finalString = numOfSpaces * " " + string
+        print(finalString)
+        return finalString
+
+
+format_string("Marina", 12)
