@@ -1,0 +1,22 @@
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+def number_of_groups(n, k):
+    if n < k:
+        return 0
+    else:
+        result =  factorial(n) / (factorial(n - k) * factorial(k))
+        print(result)
+        return result
+
+# Приклад використання:
+# total_people = 50
+# winners_count = 7
+# result = number_of_groups(total_people, winners_count)
+# print(f"Кількість різних списків переможців: {result}")
+
+
+number_of_groups(50, 7)

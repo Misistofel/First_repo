@@ -1,0 +1,13 @@
+def amount_payment(payment):
+    sum = 0
+    for value in payment:
+        if value > 0:
+            sum += value
+    print(sum)
+    return sum
+
+
+payment = [1, -3, 4]
+amount_payment(payment)
+
+        

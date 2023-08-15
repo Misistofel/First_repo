@@ -1,0 +1,22 @@
+def prepare_data(data):
+    min_value = data[0]
+    max_value = data[0]
+
+    for value in data:
+        if value < min_value:
+            min_value = value
+        if value > max_value:
+            max_value = value  
+
+    data.remove(min_value)  
+    data.remove(max_value)    
+    data.sort()
+    return data 
+
+    #return min_value , max_value    
+
+
+
+
+list = [3, 1, 8, 4, 5, 2]
+print(prepare_data(list))
